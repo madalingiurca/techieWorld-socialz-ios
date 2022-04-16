@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */; };
+		1CBEEA89280B71C7009BAEEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA88280B71C7009BAEEE /* ContentView.swift */; };
+		1CBEEA8B280B71C9009BAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */; };
+		1CBEEA8E280B71C9009BAEEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8D280B71C9009BAEEE /* Preview Assets.xcassets */; };
+		1CBEEA98280B71C9009BAEEE /* TechieWorld_SocialzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA97280B71C9009BAEEE /* TechieWorld_SocialzTests.swift */; };
+		1CBEEAA2280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */; };
+		1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CBEEA94280B71C9009BAEEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CBEEA7B280B71C7009BAEEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CBEEA82280B71C7009BAEEE;
+			remoteInfo = "TechieWorld Socialz";
+		};
+		1CBEEA9E280B71C9009BAEEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CBEEA7B280B71C7009BAEEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CBEEA82280B71C7009BAEEE;
+			remoteInfo = "TechieWorld Socialz";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechieWorld Socialz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzApp.swift; sourceTree = "<group>"; };
+		1CBEEA88280B71C7009BAEEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CBEEA8D280B71C9009BAEEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1CBEEA93280B71C9009BAEEE /* TechieWorld SocialzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechieWorld SocialzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBEEA97280B71C9009BAEEE /* TechieWorld_SocialzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzTests.swift; sourceTree = "<group>"; };
+		1CBEEA9D280B71C9009BAEEE /* TechieWorld SocialzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechieWorld SocialzUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITests.swift; sourceTree = "<group>"; };
+		1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CBEEA80280B71C7009BAEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBEEA90280B71C9009BAEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBEEA9A280B71C9009BAEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CBEEA7A280B71C7009BAEEE = {
+			isa = PBXGroup;
+			children = (
+				1CBEEA85280B71C7009BAEEE /* TechieWorld Socialz */,
+				1CBEEA96280B71C9009BAEEE /* TechieWorld SocialzTests */,
+				1CBEEAA0280B71C9009BAEEE /* TechieWorld SocialzUITests */,
+				1CBEEA84280B71C7009BAEEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CBEEA84280B71C7009BAEEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */,
+				1CBEEA93280B71C9009BAEEE /* TechieWorld SocialzTests.xctest */,
+				1CBEEA9D280B71C9009BAEEE /* TechieWorld SocialzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CBEEA85280B71C7009BAEEE /* TechieWorld Socialz */ = {
+			isa = PBXGroup;
+			children = (
+				1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */,
+				1CBEEA88280B71C7009BAEEE /* ContentView.swift */,
+				1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */,
+				1CBEEA8C280B71C9009BAEEE /* Preview Content */,
+			);
+			path = "TechieWorld Socialz";
+			sourceTree = "<group>";
+		};
+		1CBEEA8C280B71C9009BAEEE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1CBEEA8D280B71C9009BAEEE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1CBEEA96280B71C9009BAEEE /* TechieWorld SocialzTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CBEEA97280B71C9009BAEEE /* TechieWorld_SocialzTests.swift */,
+			);
+			path = "TechieWorld SocialzTests";
+			sourceTree = "<group>";
+		};
+		1CBEEAA0280B71C9009BAEEE /* TechieWorld SocialzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */,
+				1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */,
+			);
+			path = "TechieWorld SocialzUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CBEEA82280B71C7009BAEEE /* TechieWorld Socialz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBEEAA7280B71C9009BAEEE /* Build configuration list for PBXNativeTarget "TechieWorld Socialz" */;
+			buildPhases = (
+				1CBEEA7F280B71C7009BAEEE /* Sources */,
+				1CBEEA80280B71C7009BAEEE /* Frameworks */,
+				1CBEEA81280B71C7009BAEEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TechieWorld Socialz";
+			productName = "TechieWorld Socialz";
+			productReference = 1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CBEEA92280B71C9009BAEEE /* TechieWorld SocialzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBEEAAA280B71C9009BAEEE /* Build configuration list for PBXNativeTarget "TechieWorld SocialzTests" */;
+			buildPhases = (
+				1CBEEA8F280B71C9009BAEEE /* Sources */,
+				1CBEEA90280B71C9009BAEEE /* Frameworks */,
+				1CBEEA91280B71C9009BAEEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CBEEA95280B71C9009BAEEE /* PBXTargetDependency */,
+			);
+			name = "TechieWorld SocialzTests";
+			productName = "TechieWorld SocialzTests";
+			productReference = 1CBEEA93280B71C9009BAEEE /* TechieWorld SocialzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1CBEEA9C280B71C9009BAEEE /* TechieWorld SocialzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBEEAAD280B71C9009BAEEE /* Build configuration list for PBXNativeTarget "TechieWorld SocialzUITests" */;
+			buildPhases = (
+				1CBEEA99280B71C9009BAEEE /* Sources */,
+				1CBEEA9A280B71C9009BAEEE /* Frameworks */,
+				1CBEEA9B280B71C9009BAEEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CBEEA9F280B71C9009BAEEE /* PBXTargetDependency */,
+			);
+			name = "TechieWorld SocialzUITests";
+			productName = "TechieWorld SocialzUITests";
+			productReference = 1CBEEA9D280B71C9009BAEEE /* TechieWorld SocialzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CBEEA7B280B71C7009BAEEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					1CBEEA82280B71C7009BAEEE = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					1CBEEA92280B71C9009BAEEE = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 1CBEEA82280B71C7009BAEEE;
+					};
+					1CBEEA9C280B71C9009BAEEE = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 1CBEEA82280B71C7009BAEEE;
+					};
+				};
+			};
+			buildConfigurationList = 1CBEEA7E280B71C7009BAEEE /* Build configuration list for PBXProject "TechieWorld Socialz" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CBEEA7A280B71C7009BAEEE;
+			productRefGroup = 1CBEEA84280B71C7009BAEEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CBEEA82280B71C7009BAEEE /* TechieWorld Socialz */,
+				1CBEEA92280B71C9009BAEEE /* TechieWorld SocialzTests */,
+				1CBEEA9C280B71C9009BAEEE /* TechieWorld SocialzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CBEEA81280B71C7009BAEEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBEEA8E280B71C9009BAEEE /* Preview Assets.xcassets in Resources */,
+				1CBEEA8B280B71C9009BAEEE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBEEA91280B71C9009BAEEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBEEA9B280B71C9009BAEEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CBEEA7F280B71C7009BAEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBEEA89280B71C7009BAEEE /* ContentView.swift in Sources */,
+				1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBEEA8F280B71C9009BAEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBEEA98280B71C9009BAEEE /* TechieWorld_SocialzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBEEA99280B71C9009BAEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBEEAA2280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift in Sources */,
+				1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CBEEA95280B71C9009BAEEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CBEEA82280B71C7009BAEEE /* TechieWorld Socialz */;
+			targetProxy = 1CBEEA94280B71C9009BAEEE /* PBXContainerItemProxy */;
+		};
+		1CBEEA9F280B71C9009BAEEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CBEEA82280B71C7009BAEEE /* TechieWorld Socialz */;
+			targetProxy = 1CBEEA9E280B71C9009BAEEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CBEEAA5280B71C9009BAEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CBEEAA6280B71C9009BAEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CBEEAA8280B71C9009BAEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TechieWorld Socialz/Preview Content\"";
+				DEVELOPMENT_TEAM = NM37DV9H93;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techieWorld.TechieWorld-Socialz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CBEEAA9280B71C9009BAEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TechieWorld Socialz/Preview Content\"";
+				DEVELOPMENT_TEAM = NM37DV9H93;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techieWorld.TechieWorld-Socialz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1CBEEAAB280B71C9009BAEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NM37DV9H93;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techieWorld.TechieWorld-SocialzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechieWorld Socialz.app/TechieWorld Socialz";
+			};
+			name = Debug;
+		};
+		1CBEEAAC280B71C9009BAEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NM37DV9H93;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techieWorld.TechieWorld-SocialzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechieWorld Socialz.app/TechieWorld Socialz";
+			};
+			name = Release;
+		};
+		1CBEEAAE280B71C9009BAEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NM37DV9H93;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techieWorld.TechieWorld-SocialzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TechieWorld Socialz";
+			};
+			name = Debug;
+		};
+		1CBEEAAF280B71C9009BAEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NM37DV9H93;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techieWorld.TechieWorld-SocialzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TechieWorld Socialz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CBEEA7E280B71C7009BAEEE /* Build configuration list for PBXProject "TechieWorld Socialz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBEEAA5280B71C9009BAEEE /* Debug */,
+				1CBEEAA6280B71C9009BAEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBEEAA7280B71C9009BAEEE /* Build configuration list for PBXNativeTarget "TechieWorld Socialz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBEEAA8280B71C9009BAEEE /* Debug */,
+				1CBEEAA9280B71C9009BAEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBEEAAA280B71C9009BAEEE /* Build configuration list for PBXNativeTarget "TechieWorld SocialzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBEEAAB280B71C9009BAEEE /* Debug */,
+				1CBEEAAC280B71C9009BAEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBEEAAD280B71C9009BAEEE /* Build configuration list for PBXNativeTarget "TechieWorld SocialzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBEEAAE280B71C9009BAEEE /* Debug */,
+				1CBEEAAF280B71C9009BAEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CBEEA7B280B71C7009BAEEE /* Project object */;
+}
