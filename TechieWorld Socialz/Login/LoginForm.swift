@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct LoginForm: View {
-    
-    private var client = RestClient()
-    
     @State private var username = ""
     @State private var password = ""
-
+    
     @State private var showingLoginScreen = false
     @State private var awaitingLogin = false
+    
+    @State var authentication = Authentication()
     
     var body: some View {
         VStack {
@@ -33,11 +32,15 @@ struct LoginForm: View {
                 .frame(width: 300, height: 50)
                 .background(Color.black.opacity(0.05))
                 .cornerRadius(10)
-
+            if (awaitingLogin) {
+                ProgressView()
+            }
             Button(action: {
                 Task {
                     awaitingLogin = true
-                    try? await client.singIn(username: username, password: password)
+                    try? await WebService.shared.singIn(username: username, password: password) {
+                        success in awaitingLogin = false
+                    }
                 }
             }, label: {
                 Text("Login")
@@ -48,7 +51,7 @@ struct LoginForm: View {
             .cornerRadius(20)
         }
     }
-
+    
 }
 
 struct CustomTextM: ViewModifier {

@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct TechieWorld_SocialzApp: App {
+    @StateObject var authentication: Authentication = Authentication()
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if (authentication.isAuthenticated) {
+                MainView()
+            }
+            else {
+                LoginView()
+            }
         }
     }
 }

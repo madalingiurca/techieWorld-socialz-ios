@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5925D1280C17EF00C66905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D0280C17EF00C66905 /* MainView.swift */; };
+		1C5925D3280C18D300C66905 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D2280C18D300C66905 /* Authentication.swift */; };
 		1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */; };
 		1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA88280B71C7009BAEEE /* LoginView.swift */; };
 		1CBEEA8B280B71C9009BAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */; };
@@ -15,7 +17,7 @@
 		1CBEEAA2280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */; };
 		1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */; };
 		1CBEEAB1280B8109009BAEEE /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB0280B8109009BAEEE /* LoginForm.swift */; };
-		1CBEEAB3280B8492009BAEEE /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB2280B8492009BAEEE /* RestClient.swift */; };
+		1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB2280B8492009BAEEE /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C5925D0280C17EF00C66905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1C5925D2280C18D300C66905 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechieWorld Socialz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzApp.swift; sourceTree = "<group>"; };
 		1CBEEA88280B71C7009BAEEE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -47,7 +51,7 @@
 		1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITests.swift; sourceTree = "<group>"; };
 		1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1CBEEAB0280B8109009BAEEE /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
-		1CBEEAB2280B8492009BAEEE /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		1CBEEAB2280B8492009BAEEE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C5925CD280C15D500C66905 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1CBEEAB2280B8492009BAEEE /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1C5925CE280C17AD00C66905 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1CBEEAB0280B8109009BAEEE /* LoginForm.swift */,
+				1CBEEA88280B71C7009BAEEE /* LoginView.swift */,
+				1C5925D2280C18D300C66905 /* Authentication.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1C5925CF280C17CB00C66905 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				1C5925D0280C17EF00C66905 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		1CBEEA7A280B71C7009BAEEE = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */,
-				1CBEEA88280B71C7009BAEEE /* LoginView.swift */,
+				1C5925CF280C17CB00C66905 /* MainView */,
+				1C5925CE280C17AD00C66905 /* Login */,
+				1C5925CD280C15D500C66905 /* Services */,
 				1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */,
 				1CBEEA8C280B71C9009BAEEE /* Preview Content */,
-				1CBEEAB0280B8109009BAEEE /* LoginForm.swift */,
-				1CBEEAB2280B8492009BAEEE /* RestClient.swift */,
 			);
 			path = "TechieWorld Socialz";
 			sourceTree = "<group>";
@@ -263,10 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBEEAB3280B8492009BAEEE /* RestClient.swift in Sources */,
+				1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */,
 				1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */,
 				1CBEEAB1280B8109009BAEEE /* LoginForm.swift in Sources */,
 				1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */,
+				1C5925D1280C17EF00C66905 /* MainView.swift in Sources */,
+				1C5925D3280C18D300C66905 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -407,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
