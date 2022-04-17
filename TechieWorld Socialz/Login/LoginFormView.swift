@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct LoginForm: View {
+struct LoginFormView: View {
+    @State private var authenticationErrorMessage = ""
+    @State private var errorOccured = false
+    
     @State private var username = ""
     @State private var password = ""
     
-    @State private var showingLoginScreen = false
+    @State private var authorizationFails = false
     @State private var awaitingLogin = false
     
-    @State var authentication = Authentication()
+    @State var authentication: Authentication
     
     var body: some View {
         VStack {
@@ -38,20 +41,34 @@ struct LoginForm: View {
             Button(action: {
                 Task {
                     awaitingLogin = true
-                    try? await WebService.shared.singIn(username: username, password: password) {
-                        success in awaitingLogin = false
+                    await authentication.login(username: username, password: password) {
+                        result in switch result {
+                        case .success(_):
+                            awaitingLogin = false
+                            authentication.isAuthenticated = true
+                        case .failure(let authError):
+                            errorOccured = true
+                            authenticationErrorMessage = authError.localizedDescription
+                            awaitingLogin = false
+                        }
                     }
+                    
                 }
             }, label: {
                 Text("Login")
             })
+            .alert("Login failed", isPresented: ($errorOccured) ) {
+                Button("OK") {
+                }
+            } message: {
+                Text(authenticationErrorMessage)
+            }
             .foregroundColor(.white)
             .frame(width: 300, height: 50)
             .background(Color.green)
             .cornerRadius(20)
         }
     }
-    
 }
 
 struct CustomTextM: ViewModifier {
@@ -66,8 +83,8 @@ struct CustomTextM: ViewModifier {
     }
 }
 
-struct LoginForm_Previews: PreviewProvider {
+struct LoginFormView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginForm()
+        LoginFormView(authentication: Authentication())
     }
 }

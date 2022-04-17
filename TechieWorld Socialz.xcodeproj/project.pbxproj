@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C5925D1280C17EF00C66905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D0280C17EF00C66905 /* MainView.swift */; };
 		1C5925D3280C18D300C66905 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D2280C18D300C66905 /* Authentication.swift */; };
+		1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59928C280C3E9600886EE2 /* AuthenticationError.swift */; };
 		1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */; };
 		1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA88280B71C7009BAEEE /* LoginView.swift */; };
 		1CBEEA8B280B71C9009BAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */; };
@@ -16,7 +17,7 @@
 		1CBEEA98280B71C9009BAEEE /* TechieWorld_SocialzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA97280B71C9009BAEEE /* TechieWorld_SocialzTests.swift */; };
 		1CBEEAA2280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */; };
 		1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */; };
-		1CBEEAB1280B8109009BAEEE /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB0280B8109009BAEEE /* LoginForm.swift */; };
+		1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */; };
 		1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB2280B8492009BAEEE /* WebService.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		1C5925D0280C17EF00C66905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1C5925D2280C18D300C66905 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		1C59928C280C3E9600886EE2 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechieWorld Socialz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzApp.swift; sourceTree = "<group>"; };
 		1CBEEA88280B71C7009BAEEE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		1CBEEA9D280B71C9009BAEEE /* TechieWorld SocialzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechieWorld SocialzUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITests.swift; sourceTree = "<group>"; };
 		1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1CBEEAB0280B8109009BAEEE /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		1CBEEAB2280B8492009BAEEE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,9 +92,9 @@
 		1C5925CE280C17AD00C66905 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1CBEEAB0280B8109009BAEEE /* LoginForm.swift */,
+				1C59928B280C3E8700886EE2 /* Model */,
+				1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */,
 				1CBEEA88280B71C7009BAEEE /* LoginView.swift */,
-				1C5925D2280C18D300C66905 /* Authentication.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -103,6 +105,15 @@
 				1C5925D0280C17EF00C66905 /* MainView.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		1C59928B280C3E8700886EE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C5925D2280C18D300C66905 /* Authentication.swift */,
+				1C59928C280C3E9600886EE2 /* AuthenticationError.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1CBEEA7A280B71C7009BAEEE = {
@@ -293,9 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */,
 				1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */,
 				1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */,
-				1CBEEAB1280B8109009BAEEE /* LoginForm.swift in Sources */,
+				1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */,
 				1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */,
 				1C5925D1280C17EF00C66905 /* MainView.swift in Sources */,
 				1C5925D3280C18D300C66905 /* Authentication.swift in Sources */,
