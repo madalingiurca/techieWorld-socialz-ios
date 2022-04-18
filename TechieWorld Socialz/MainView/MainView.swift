@@ -11,16 +11,30 @@ struct MainView: View {
     @EnvironmentObject var authentication: Authentication
     
     var body: some View {
-        
-        VStack {
-            Text("Hello, you're authenticated!")
-            Text("Here is your acessToken")
-            Spacer()
-            Text(authentication.accessToken)
-                .bold()
-            Spacer()
+        ZStack {
+            PostsListView(dataSource: PostDataSource(accessToken: authentication.accessToken))
+            HStack {
+                VStack {
+                    Spacer()
+                    ZStack{
+                        Button(action: {
+                            authentication.accessToken = ""
+                            authentication.isAuthenticated = false
+                        })
+                        {
+                            Circle()
+                                .foregroundColor(Color("pink"))
+                                .frame(width: 60, height: 60)
+                        }
+                        Image(systemName: "arrow.left")
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                    }
+                    .padding(5)
+                }
+                Spacer()
+            }
         }
-        
     }
 }
 

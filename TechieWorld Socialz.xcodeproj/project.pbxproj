@@ -10,6 +10,10 @@
 		1C5925D1280C17EF00C66905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D0280C17EF00C66905 /* MainView.swift */; };
 		1C5925D3280C18D300C66905 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D2280C18D300C66905 /* Authentication.swift */; };
 		1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59928C280C3E9600886EE2 /* AuthenticationError.swift */; };
+		1C5E31F9280DD65500962DBA /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E31F8280DD65500962DBA /* PostsListView.swift */; };
+		1C932F17280C7869002DD514 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F16280C7869002DD514 /* PostDataSource.swift */; };
+		1C932F19280C7901002DD514 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F18280C7901002DD514 /* Post.swift */; };
+		1C932F1B280C79D3002DD514 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */; };
 		1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */; };
 		1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA88280B71C7009BAEEE /* LoginView.swift */; };
 		1CBEEA8B280B71C9009BAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 		1C5925D0280C17EF00C66905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1C5925D2280C18D300C66905 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		1C59928C280C3E9600886EE2 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		1C5E31F8280DD65500962DBA /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
+		1C932F16280C7869002DD514 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
+		1C932F18280C7901002DD514 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
 		1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechieWorld Socialz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzApp.swift; sourceTree = "<group>"; };
 		1CBEEA88280B71C7009BAEEE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -84,7 +92,6 @@
 		1C5925CD280C15D500C66905 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1CBEEAB2280B8492009BAEEE /* WebService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				1C5925D0280C17EF00C66905 /* MainView.swift */,
+				1C5E31F8280DD65500962DBA /* PostsListView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -112,6 +120,25 @@
 			children = (
 				1C5925D2280C18D300C66905 /* Authentication.swift */,
 				1C59928C280C3E9600886EE2 /* AuthenticationError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C932F15280C7856002DD514 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				1C932F1E280C7B0C002DD514 /* Model */,
+				1CBEEAB2280B8492009BAEEE /* WebService.swift */,
+				1C932F16280C7869002DD514 /* PostDataSource.swift */,
+				1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		1C932F1E280C7B0C002DD514 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C932F18280C7901002DD514 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */,
+				1C932F15280C7856002DD514 /* DataSource */,
 				1C5925CF280C17CB00C66905 /* MainView */,
 				1C5925CE280C17AD00C66905 /* Login */,
 				1C5925CD280C15D500C66905 /* Services */,
@@ -304,11 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C932F17280C7869002DD514 /* PostDataSource.swift in Sources */,
+				1C5E31F9280DD65500962DBA /* PostsListView.swift in Sources */,
 				1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */,
 				1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */,
 				1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */,
+				1C932F1B280C79D3002DD514 /* ServiceConfiguration.swift in Sources */,
 				1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */,
 				1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */,
+				1C932F19280C7901002DD514 /* Post.swift in Sources */,
 				1C5925D1280C17EF00C66905 /* MainView.swift in Sources */,
 				1C5925D3280C18D300C66905 /* Authentication.swift in Sources */,
 			);
