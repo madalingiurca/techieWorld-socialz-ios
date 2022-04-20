@@ -19,6 +19,8 @@ struct LoginView: View {
                     .font(.title2)
                     .bold()
             }
+            .ignoresSafeArea(.keyboard)
+            
             Spacer()
             LoginFormView(authentication: authentication)
             Spacer()

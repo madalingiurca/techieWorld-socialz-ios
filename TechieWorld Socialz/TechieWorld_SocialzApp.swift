@@ -18,7 +18,7 @@ struct TechieWorld_SocialzApp: App {
     var body: some Scene {
         WindowGroup {
             if authentication.isAuthenticated {
-                MainView()
+                MainView(postDataSource: PostDataSource(accessToken: authentication.accessToken))
                     .environmentObject(authentication)
             }
             else {

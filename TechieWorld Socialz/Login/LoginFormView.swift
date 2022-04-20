@@ -15,7 +15,7 @@ struct LoginFormView: View {
     @State private var password = ""
     
     @State private var authorizationFails = false
-    @State private var awaitingLogin = false
+    @State var awaitingLogin = false
     
     @State var authentication: Authentication
     
@@ -36,37 +36,39 @@ struct LoginFormView: View {
                 .background(Color.black.opacity(0.05))
                 .cornerRadius(10)
             if (awaitingLogin) {
-                ProgressView()
+                ProgressView().frame(width: 30, height: 30, alignment: .center)
             }
-            Button(action: {
-                Task {
-                    awaitingLogin = true
-                    await authentication.login(username: username, password: password) {
-                        result in switch result {
-                        case .success(_):
-                            awaitingLogin = false
-                            authentication.isAuthenticated = true
-                        case .failure(let authError):
-                            errorOccured = true
-                            authenticationErrorMessage = authError.localizedDescription
-                            awaitingLogin = false
+            else {
+                Button(action: {
+                    Task {
+                        awaitingLogin = true
+                        await authentication.login(username: username, password: password) {
+                            result in switch result {
+                            case .success(_):
+                                awaitingLogin = false
+                                authentication.isAuthenticated = true
+                            case .failure(let authError):
+                                errorOccured = true
+                                authenticationErrorMessage = authError.localizedDescription
+                                awaitingLogin = false
+                            }
                         }
+                        
                     }
-                    
+                }, label: {
+                    Text("Login")
+                })
+                .alert("Login failed", isPresented: ($errorOccured) ) {
+                    Button("OK") {
+                    }
+                } message: {
+                    Text(authenticationErrorMessage)
                 }
-            }, label: {
-                Text("Login")
-            })
-            .alert("Login failed", isPresented: ($errorOccured) ) {
-                Button("OK") {
-                }
-            } message: {
-                Text(authenticationErrorMessage)
+                .foregroundColor(.white)
+                .frame(width: 300, height: 50)
+                .background(Color.green)
+                .cornerRadius(20)
             }
-            .foregroundColor(.white)
-            .frame(width: 300, height: 50)
-            .background(Color.green)
-            .cornerRadius(20)
         }
     }
 }

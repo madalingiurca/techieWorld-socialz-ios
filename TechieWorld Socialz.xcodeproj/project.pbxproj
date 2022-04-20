@@ -23,6 +23,7 @@
 		1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */; };
 		1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */; };
 		1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB2280B8492009BAEEE /* WebService.swift */; };
+		1CCFCFDA28107085007B7ED7 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCFCFD928107085007B7ED7 /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		1CBEEAB2280B8492009BAEEE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		1CCFCFD928107085007B7ED7 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				1C5925D0280C17EF00C66905 /* MainView.swift */,
 				1C5E31F8280DD65500962DBA /* PostsListView.swift */,
+				1CCFCFD928107085007B7ED7 /* PostView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */,
 				1C932F19280C7901002DD514 /* Post.swift in Sources */,
 				1C5925D1280C17EF00C66905 /* MainView.swift in Sources */,
+				1CCFCFDA28107085007B7ED7 /* PostView.swift in Sources */,
 				1C5925D3280C18D300C66905 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
