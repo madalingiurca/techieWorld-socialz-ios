@@ -12,25 +12,7 @@ struct MainView: View {
     let postDataSource: PostDataSource
     
     var body: some View {
-        ZStack {
-            PostsListView(dataSource: postDataSource)
-            
-            VStack{
-                Spacer()
-                HStack(alignment: .top) {
-                    Spacer()
-                    Button(action: {
-                        debugPrint("Add post button pressed!")
-                    }) {
-                        Image(systemName: "plus.bubble.fill")
-                            .resizable()
-                            .foregroundColor(Color.primary)
-                            .frame(width: 40, height: 40, alignment: .center)
-                    }
-                }
-                .padding(.trailing)
-            }
-        }
+        PostsListView(dataSource: postDataSource)
     }
 }
 
@@ -48,5 +30,25 @@ struct SwiftUIView_Previews: PreviewProvider {
         
         return MainView(postDataSource: datasource)
             .environmentObject(auth)
+    }
+}
+
+struct FloatingButton: View {
+    var body: some View {
+        VStack{
+            Spacer()
+            HStack(alignment: .top) {
+                Spacer()
+                Button(action: {
+                    debugPrint("Add post button pressed!")
+                }) {
+                    Image(systemName: "plus.bubble.fill")
+                        .resizable()
+                        .foregroundColor(Color.primary)
+                        .frame(width: 40, height: 40, alignment: .center)
+                }
+            }
+            .padding(.trailing)
+        }
     }
 }

@@ -12,24 +12,33 @@ struct PostsListView: View {
     @StateObject var dataSource : PostDataSource
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(dataSource.posts, id: \.id) { post in
-                    PostView(postContent: post.content, author: post.author, numberOfComments: Int.random(in: 1..<100))
-                        .task {
-                            dataSource.loadMoreContentIfNeeded(currentItem: post)
+        NavigationView {
+            ZStack {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(dataSource.posts, id: \.id) { post in
+                            NavigationLink(destination: {
+                                Text("WIP: Post will be here")
+                            }) {
+                                PostView(postContent: post.content, author: post.author, numberOfComments: Int.random(in: 1..<100))
+                                    .task {
+                                        dataSource.loadMoreContentIfNeeded(currentItem: post)
+                                    }
+                                    .padding(.horizontal)
+                            }
+                            .navigationBarHidden(true)
+                            .accentColor(.primary)
                         }
-                        .padding(.horizontal)
+                        
+                        if dataSource.isLoadingPage {
+                            ProgressView()
+                        }
+                    }
+                    .refreshable(action: {
+                        debugPrint("Posts refreshed.")
+                    })
                 }
-                
-                if dataSource.isLoadingPage {
-                    ProgressView()
-                }
-            }
-        }
-        .toolbar() {
-            Button(action: {}) {
-                Image(systemName: "plus")
+                FloatingButton()
             }
         }
     }

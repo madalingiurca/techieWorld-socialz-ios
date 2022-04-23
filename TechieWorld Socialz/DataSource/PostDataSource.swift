@@ -71,18 +71,5 @@ class PostDataSource: ObservableObject {
             self.posts = postings
         })
         .store(in: &disposables)
-        
-        //        URLSession.shared.dataTaskPublisher(for: url)
-        //            .map(\.data)
-        //            .decode(type: [Post].self, decoder: JSONDecoder())
-        //            .receive(on: DispatchQueue.main)
-        //            .handleEvents(receiveOutput: { response in
-        //                self.isLoadingPage = false
-        //            })
-        //            .map({ fetchedPosts in
-        //                return self.posts + fetchedPosts
-        //            })
-        //            .catch({ _ in Just(self.posts) })
-        //            .assign(to: &$posts)
     }
 }

@@ -21,22 +21,25 @@ struct LoginFormView: View {
     
     var body: some View {
         VStack {
-            Text("Login")
-                .font(.title2)
-                .padding()
             TextField("Username", text: $username)
                 .padding()
                 .frame(width: 300, height: 50)
                 .background(Color.black.opacity(0.05))
                 .cornerRadius(10)
                 .autocapitalization(.none)
+                .disabled(awaitingLogin)
             SecureField("Password", text: $password)
                 .padding()
                 .frame(width: 300, height: 50)
                 .background(Color.black.opacity(0.05))
                 .cornerRadius(10)
+                .disabled(awaitingLogin)
             if (awaitingLogin) {
-                ProgressView().frame(width: 30, height: 30, alignment: .center)
+                ProgressView()
+                    .foregroundColor(.white)
+                    .frame(width: 300, height: 50)
+                    .background(Color.green)
+                    .cornerRadius(20)
             }
             else {
                 Button(action: {
@@ -56,7 +59,17 @@ struct LoginFormView: View {
                         
                     }
                 }, label: {
-                    Text("Login")
+                    VStack {
+                        if awaitingLogin {
+                            Text("Here")
+                        } else {
+                            Text("Login")
+                                .foregroundColor(.white)
+                                .frame(width: 300, height: 50)
+                                .background(Color.green)
+                                .cornerRadius(20)
+                        }
+                    }
                 })
                 .alert("Login failed", isPresented: ($errorOccured) ) {
                     Button("OK") {
@@ -64,24 +77,8 @@ struct LoginFormView: View {
                 } message: {
                     Text(authenticationErrorMessage)
                 }
-                .foregroundColor(.white)
-                .frame(width: 300, height: 50)
-                .background(Color.green)
-                .cornerRadius(20)
             }
         }
-    }
-}
-
-struct CustomTextM: ViewModifier {
-    let fontName: String
-    let fontSize: CGFloat
-    let fontColor: Color
-    
-    func body(content: Content) -> some View {
-        content
-            .font(.custom(fontName, size: fontSize))
-            .foregroundColor(fontColor)
     }
 }
 

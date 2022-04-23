@@ -15,8 +15,9 @@ struct LoginView: View {
                 Text("Techie World")
                     .font(.largeTitle)
                     .bold()
-                Text("SocialZ")
+                Text("Socialz")
                     .font(.title2)
+                    .italic()
                     .bold()
             }
             .ignoresSafeArea(.keyboard)
