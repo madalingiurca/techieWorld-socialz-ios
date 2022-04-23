@@ -36,6 +36,18 @@ struct LoginView: View {
 
 }
 
+struct CustomTextM: ViewModifier {
+    let fontName: String
+    let fontSize: CGFloat
+    let fontColor: Color
+
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(fontName, size: fontSize))
+            .foregroundColor(fontColor)
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {

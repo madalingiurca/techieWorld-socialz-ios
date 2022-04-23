@@ -56,7 +56,6 @@ struct LoginFormView: View {
                                 awaitingLogin = false
                             }
                         }
-                        
                     }
                 }, label: {
                     VStack {
