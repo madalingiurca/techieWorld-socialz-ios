@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ModalView
 
 struct PostsListView: View {
     
@@ -38,9 +39,27 @@ struct PostsListView: View {
                         debugPrint("Posts refreshed.")
                     })
                 }
-                FloatingButton()
+                ModalPresenter {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            ModalLink(destination: {
+                                dismiss in PostCreatorView(dismiss: dismiss)
+                            }) {
+                                Image(systemName: "plus.bubble.fill")
+                                    .resizable()
+                                    .foregroundColor(Color.primary)
+                                    .frame(width: 40, height: 40, alignment: .trailing)
+                                    .padding()
+                            }
+                        }
+                    }
+                }
+                //                FloatingButton()
             }
         }
+        
     }
 }
 
@@ -56,3 +75,5 @@ struct PostsListView_Previews: PreviewProvider {
         return PostsListView(dataSource: datasource)
     }
 }
+
+
