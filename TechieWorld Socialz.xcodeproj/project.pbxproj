@@ -25,7 +25,7 @@
 		1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */; };
 		1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB2280B8492009BAEEE /* WebService.swift */; };
 		1CCFCFDA28107085007B7ED7 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCFCFD928107085007B7ED7 /* PostView.swift */; };
-		4E1EFEC02850E2800084E8B6 /* CreateNewPostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EFEBF2850E2800084E8B6 /* CreateNewPostButton.swift */; };
+		4E1EFEC02850E2800084E8B6 /* NewPostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EFEBF2850E2800084E8B6 /* NewPostButton.swift */; };
 		4E1EFEC3285119630084E8B6 /* LogInButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */; };
 		4EEA3B6B284B79CF00F93955 /* LogInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA3B6A284B79CF00F93955 /* LogInButton.swift */; };
 		4EEA3B6D284B7DAC00F93955 /* TwButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA3B6C284B7DAC00F93955 /* TwButton.swift */; };
@@ -73,7 +73,7 @@
 		1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		1CBEEAB2280B8492009BAEEE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		1CCFCFD928107085007B7ED7 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		4E1EFEBF2850E2800084E8B6 /* CreateNewPostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPostButton.swift; sourceTree = "<group>"; };
+		4E1EFEBF2850E2800084E8B6 /* NewPostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostButton.swift; sourceTree = "<group>"; };
 		4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButtonStyle.swift; sourceTree = "<group>"; };
 		4EEA3B6A284B79CF00F93955 /* LogInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButton.swift; sourceTree = "<group>"; };
 		4EEA3B6C284B7DAC00F93955 /* TwButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwButton.swift; sourceTree = "<group>"; };
@@ -107,13 +107,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C5925CD280C15D500C66905 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		1C5925CE280C17AD00C66905 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,12 +181,11 @@
 			isa = PBXGroup;
 			children = (
 				1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */,
-				1C5925CF280C17CB00C66905 /* MainView */,
-				4EF0DF5F284D38C80050518D /* Config */,
-				1C932F15280C7856002DD514 /* DataSource */,
 				1C5925CE280C17AD00C66905 /* Login */,
+				1C5925CF280C17CB00C66905 /* MainView */,
+				1C932F15280C7856002DD514 /* DataSource */,
 				4EEA3B69284B79B700F93955 /* Components */,
-				1C5925CD280C15D500C66905 /* Services */,
+				4EF0DF5F284D38C80050518D /* Config */,
 				1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */,
 				1CBEEA8C280B71C9009BAEEE /* Preview Content */,
 			);
@@ -240,7 +232,7 @@
 				4EEA3B6C284B7DAC00F93955 /* TwButton.swift */,
 				4EEA3B6E284B883300F93955 /* TwTextField.swift */,
 				4EEA3B70284B8C3D00F93955 /* TwSecureField.swift */,
-				4E1EFEBF2850E2800084E8B6 /* CreateNewPostButton.swift */,
+				4E1EFEBF2850E2800084E8B6 /* NewPostButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -391,7 +383,7 @@
 				4EEA3B6F284B883300F93955 /* TwTextField.swift in Sources */,
 				1C932F17280C7869002DD514 /* PostDataSource.swift in Sources */,
 				1C5E31F9280DD65500962DBA /* PostsListView.swift in Sources */,
-				4E1EFEC02850E2800084E8B6 /* CreateNewPostButton.swift in Sources */,
+				4E1EFEC02850E2800084E8B6 /* NewPostButton.swift in Sources */,
 				1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */,
 				1C7264D22814BDE4002DA489 /* PostCreatorView.swift in Sources */,
 				1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */,

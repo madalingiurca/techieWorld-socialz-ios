@@ -32,6 +32,39 @@ class PostDataSource: ObservableObject {
             loadMoreContent()
         }
     }
+
+    func createNewPost(_ content: String, done: @escaping () -> Void) {
+        guard let url = URL(string: API.URL + "/posts/new") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "AUTHORIZATION")
+        let newPostRequest = [
+            "content": content
+        ]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: newPostRequest)
+
+        URLSession.shared.dataTaskPublisher(for: request)
+            .tryMap() { element -> Data in
+                guard let httpResponse = element.response as? HTTPURLResponse,
+                      httpResponse.statusCode == 202 else {
+                    throw URLError(.badServerResponse)
+                }
+                return element.data
+            }
+            .decode(type: Post.self, decoder: JSONDecoder())
+            .receive(on: RunLoop.main)
+            .sink(
+                receiveCompletion: { _ in
+                    print("Added new post.")
+                    done()
+                },
+                receiveValue: { post in
+                    self.posts.insert(post, at: self.posts.count - 1)
+                }
+            )
+            .store(in: &disposables)
+    }
     
     private func loadMoreContent() {
         guard !isLoadingPage && canLoadMorePages else {

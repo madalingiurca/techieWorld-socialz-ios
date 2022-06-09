@@ -14,14 +14,16 @@ struct PostCreatorView: View {
     @Binding var isPresented: Bool
     @State var showSubmitPostDialog = false
     @State var posting = false
-    @FocusState private var focusedTextField : Bool;
+    @FocusState private var focusedTextField : Bool
+    let dataSource: PostDataSource
 
-    init(isPresented: Binding<Bool>) {
+    init(dataSource: PostDataSource, isPresented: Binding<Bool>) {
+        self.dataSource = dataSource
         self._isPresented = isPresented
     }
 
-    init(isPresented: Binding<Bool>, text: String) {
-        self._isPresented = isPresented
+    init(dataSource: PostDataSource, isPresented: Binding<Bool>, text: String) {
+        self.init(dataSource: dataSource, isPresented: isPresented)
         self.text = text
     }
     
@@ -35,13 +37,17 @@ struct PostCreatorView: View {
 
                 Spacer()
 
-                Button(action: { isPresented = false }, label: {
-                    Image(systemName: "x.circle.fill")
-                        .resizable()
-                        .foregroundColor(Color.primary)
-                        .frame(width: 30, height: 30, alignment: .trailing)
-                })
-                .padding()
+                if !posting {
+                    Button(action: { isPresented = false }, label: {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .foregroundColor(Color.primary)
+                            .frame(width: 20, height: 20, alignment: .trailing)
+                    })
+                    .padding()
+                } else {
+                    // Cancel button
+                }
             }
             
             VStack {
@@ -56,26 +62,29 @@ struct PostCreatorView: View {
                     TextEditor(text: $text)
                         .focused($focusedTextField)
                 }
-                    .frame(minHeight: 30, maxHeight: .greatestFiniteMagnitude)
-                    .onTapGesture {
-                        focusedTextField.toggle()
-                    }
-                    .padding(.leading, 5)
-                    .padding(.trailing, 5)
-                    .overlay(RoundedRectangle(cornerRadius: 16)
+                .frame(minHeight: 30, maxHeight: .greatestFiniteMagnitude)
+                .onTapGesture {
+                    focusedTextField.toggle()
+                }
+                .padding(.horizontal, 5)
+                .overlay(RoundedRectangle(cornerRadius: 16)
                     .stroke(Color.primary, lineWidth: 1))
 
             }
 
 
-            TwButton("Submit") {
+            TwButton("Submit", loading: posting) {
                 showSubmitPostDialog = true
                 focusedTextField = false
             }
             .alert("Submit post?", isPresented: $showSubmitPostDialog, actions: {
                 Button("Cancel") { }
                 Button("Submit") {
-                    isPresented = false
+                    posting = true
+                    dataSource.createNewPost(text) {
+                        isPresented = false
+                        posting = false
+                    }
                 }
             })
             .padding(.all, 7.0)
@@ -86,12 +95,15 @@ struct PostCreatorView: View {
 
 struct PostCreatorView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
+        let dataSource = PostDataSource(accessToken: "access-token")
+        return Group {
             PostCreatorView(
+                dataSource: dataSource,
                 isPresented: .constant(true),
                 text: "fdjksnafposakdfsdafsdfa\nfgdasdfasdfasdcasd\nd\n\nadsgfsadgadsfgadfgadsfgasdfdjksnafposakdfsdafsdfa\nfgdasdfasdfasdcasdnd\nadsgfsadgadsfgadfgadsfgasdfdjksnafposakdfsdafsdfa\nfgdasdfasdfasdcasd\nadsgfsadgadsfgadfgadsfgasd"
             )
             PostCreatorView(
+                dataSource: dataSource,
                 isPresented: .constant(true),
                 text: "fdjksnafposakdfsdafsdfa\nfgdasdfasdfasdcasd\nd\n\nadsgfsadgadsfgadfgadsfgasdfdjksnafposakdfsdafsdfa\nfgdasdfasdfasdcasdnd\nadsgfsadgadsfgadfgadsfgasdfdjksnafposakdfsdafsdfa\nfgdasdfasdfasdcasd\nadsgfsadgadsfgadfgadsfgasd"
             )

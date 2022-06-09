@@ -39,7 +39,7 @@ struct PostsListView: View {
                         debugPrint("Posts refreshed.")
                     })
                 }
-                CreateNewPostButton()
+                NewPostButton(dataSource: dataSource)
             }
         }
         

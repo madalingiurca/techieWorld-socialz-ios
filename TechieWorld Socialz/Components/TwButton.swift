@@ -36,6 +36,7 @@ struct TwButton<Content: View>: View {
                 }
             }
         }
+        .disabled(loading)
     }
 }
 
@@ -53,8 +54,14 @@ extension TwButton where Content == Text {
 
 struct TwButton_Previews: PreviewProvider {
     static var previews: some View {
-        TwButton("Button Label", loading: false) {
+        Group {
+            TwButton("Button Label", loading: false) {
+            }
+            .previewLayout(.sizeThatFits)
+            TwButton("Button Label", loading: false) {
+            }
+            .previewLayout(.sizeThatFits)
+            .preferredColorScheme(.dark)
         }
-        .previewLayout(.sizeThatFits)
     }
 }

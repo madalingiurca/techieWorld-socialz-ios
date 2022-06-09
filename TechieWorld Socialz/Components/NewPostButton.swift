@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct CreateNewPostButton: View {
+struct NewPostButton: View {
     @State var isViewingPostCreator = false
+    @State var loading = false
+    let dataSource: PostDataSource
 
     var body: some View {
         VStack{
@@ -26,14 +28,21 @@ struct CreateNewPostButton: View {
             }
             .padding(.trailing)
         }
-        .sheet(isPresented: $isViewingPostCreator) {
-            PostCreatorView(isPresented: $isViewingPostCreator)
+        .fullScreenCover(isPresented: $isViewingPostCreator) {
+            PostCreatorView(dataSource: dataSource,
+                            isPresented: $isViewingPostCreator)
         }
     }
 }
 
 struct FloatingButton_Previews: PreviewProvider {
     static var previews: some View {
-        CreateNewPostButton()
+        let datasource = PostDataSource(accessToken: "access-token")
+
+        return Group {
+            NewPostButton(dataSource: datasource)
+            NewPostButton(dataSource: datasource)
+                .preferredColorScheme(.dark)
+        }
     }
 }
