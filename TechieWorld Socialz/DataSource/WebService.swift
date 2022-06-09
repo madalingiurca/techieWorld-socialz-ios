@@ -9,8 +9,7 @@ import Foundation
 
 @MainActor
 class WebService {
-//    private let urlString = "http://localhost:8080/login"
-    private let urlString = "http://20.229.185.66:8080/login"
+    private let urlString = API.URL + "/login"
     static let shared = WebService()
     
     

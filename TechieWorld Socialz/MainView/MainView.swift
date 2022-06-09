@@ -32,23 +32,3 @@ struct SwiftUIView_Previews: PreviewProvider {
             .environmentObject(auth)
     }
 }
-
-struct FloatingButton: View {
-    var body: some View {
-        VStack{
-            Spacer()
-            HStack(alignment: .top) {
-                Spacer()
-                Button(action: {
-                    debugPrint("Add post button pressed!")
-                }) {
-                    Image(systemName: "plus.bubble.fill")
-                        .resizable()
-                        .foregroundColor(Color.primary)
-                        .frame(width: 40, height: 40, alignment: .center)
-                }
-            }
-            .padding(.trailing)
-        }
-    }
-}

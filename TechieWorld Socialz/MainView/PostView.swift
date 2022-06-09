@@ -42,7 +42,6 @@ struct PostView: View {
                 
             }
             .font(.subheadline)
-            //            .padding(.top, 2.0)
         }
         .background(Color.primary.opacity(0.08))
         .cornerRadius(10)

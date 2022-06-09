@@ -40,23 +40,13 @@ class PostDataSource: ObservableObject {
         
         isLoadingPage = true
         
-//        guard let url = URL(string: "http://localhost:8080/posts") else { return }
-        guard let url = URL(string: "http://20.229.185.66:8080/posts") else { return }
+        guard let url = URL(string: API.URL + "/posts") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Bearer " + accessToken, forHTTPHeaderField: "AUTHORIZATION")
         
         URLSession.shared.dataTaskPublisher(for: request).tryMap() { element -> Data in
-            
-            guard let httpResponse = element.response as? HTTPURLResponse
-            else {
-                throw URLError(.badServerResponse)
-            }
-
-            debugPrint("Error in calling TechieWorldAPI:")
-            debugPrint(httpResponse.statusCode)
-            
             return element.data
         }
         .decode(type: [Post].self, decoder: JSONDecoder())
@@ -66,7 +56,6 @@ class PostDataSource: ObservableObject {
         .receive(on: RunLoop.main)
         .sink(receiveCompletion: { debugPrint ("Received completion: \($0).") },
               receiveValue: { postings in
-            debugPrint ("Response data: \(postings.debugDescription).")
             self.isLoadingPage = false
             self.posts = postings
         })
