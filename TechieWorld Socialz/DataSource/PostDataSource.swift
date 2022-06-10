@@ -10,15 +10,15 @@ import Combine
 
 class PostDataSource: ObservableObject {
     @Published var posts = [Post]()
-    @Published var isLoadingPage = false
-    private var canLoadMorePages = true
-    private var accessToken: String;
+    private var accessToken: String = ""
     
     var disposables = Set<AnyCancellable>()
     
-    init(accessToken: String) {
-        self.accessToken = accessToken
-        loadMoreContent()
+    init() {
+        // Get authToken from AuthManager
+        if let token = AuthDetails.shared.token {
+            self.accessToken = token
+        }
     }
     
     func loadMoreContentIfNeeded(currentItem post: Post?) {
@@ -60,19 +60,13 @@ class PostDataSource: ObservableObject {
                     done()
                 },
                 receiveValue: { post in
-                    self.posts.insert(post, at: self.posts.count - 1)
+                    self.posts.insert(post, at: self.posts.endIndex)
                 }
             )
             .store(in: &disposables)
     }
     
-    private func loadMoreContent() {
-        guard !isLoadingPage && canLoadMorePages else {
-            return
-        }
-        
-        isLoadingPage = true
-        
+    func loadMoreContent() {
         guard let url = URL(string: API.URL + "/posts") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -89,9 +83,13 @@ class PostDataSource: ObservableObject {
         .receive(on: RunLoop.main)
         .sink(receiveCompletion: { debugPrint ("Received completion: \($0).") },
               receiveValue: { postings in
-            self.isLoadingPage = false
             self.posts = postings
         })
         .store(in: &disposables)
     }
+
+    func setAccessToken(_ token: String) {
+        self.accessToken = token
+    }
+
 }

@@ -7,17 +7,16 @@
 
 import SwiftUI
 
-struct PostView: View {
+struct PostCard: View {
     
     let postContent: String
     let author: String
     let numberOfComments: Int
     
     var body: some View {
-        VStack{
+        VStack {
             Text(postContent)
                 .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-                .padding()
             
             Spacer()
             HStack() {
@@ -25,8 +24,6 @@ struct PostView: View {
                     Image(systemName: "text.bubble.fill")
                     Text("\(numberOfComments)")
                 }
-                .padding(.leading)
-                .padding(.bottom)
                 
                 Spacer()
                 
@@ -36,15 +33,11 @@ struct PostView: View {
                         .fontWeight(.bold)
                         .padding(.trailing, 5)
                 }
-                .padding(.trailing)
-                .padding(.bottom)
                 
                 
             }
             .font(.subheadline)
         }
-        .background(Color.primary.opacity(0.08))
-        .cornerRadius(10)
         
     }
 }
@@ -52,9 +45,9 @@ struct PostView: View {
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PostView(postContent: "There", author: "JoeDoe", numberOfComments: 20)
+            PostCard(postContent: "There", author: "JoeDoe", numberOfComments: 20)
                 .previewLayout(.fixed(width: 400, height: 200))
-            PostView(postContent: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.", author: "JoeDoe", numberOfComments: 20)
+            PostCard(postContent: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.", author: "JoeDoe", numberOfComments: 20)
                 .preferredColorScheme(.dark)
                 .previewLayout(.fixed(width: 400, height: 200))
         }

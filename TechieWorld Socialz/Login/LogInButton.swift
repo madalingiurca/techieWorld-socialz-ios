@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LogInButton: View {
 
-    var authentication: Authentication
+    @EnvironmentObject var authentication: AuthManager
     var username = ""
     var password = ""
 
@@ -39,13 +39,15 @@ struct LogInButton: View {
                 message: Text(authErrorMessage)
             )
         }
+        .disabled(username.isEmpty || username.isEmpty)
         .buttonStyle(LogInButtonStyle())
     }
 }
 
 struct LogInButton_Previews: PreviewProvider {
     static var previews: some View {
-        LogInButton(authentication: Authentication())
+        LogInButton()
+            .environmentObject(AuthManager())
             .previewLayout(.sizeThatFits)
     }
 }

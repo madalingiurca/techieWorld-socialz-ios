@@ -95,7 +95,7 @@ struct PostCreatorView: View {
 
 struct PostCreatorView_Previews: PreviewProvider {
     static var previews: some View {
-        let dataSource = PostDataSource(accessToken: "access-token")
+        let dataSource = PostDataSource()
         return Group {
             PostCreatorView(
                 dataSource: dataSource,

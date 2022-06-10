@@ -37,7 +37,7 @@ struct NewPostButton: View {
 
 struct FloatingButton_Previews: PreviewProvider {
     static var previews: some View {
-        let datasource = PostDataSource(accessToken: "access-token")
+        let datasource = PostDataSource()
 
         return Group {
             NewPostButton(dataSource: datasource)

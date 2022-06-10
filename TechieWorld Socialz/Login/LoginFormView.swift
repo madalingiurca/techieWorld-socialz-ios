@@ -10,7 +10,6 @@ import SwiftUI
 struct LoginFormView: View {
     @State private var username = "user"
     @State private var password = "pass"
-    @State var authentication: Authentication
     
     var body: some View {
         VStack {
@@ -18,14 +17,14 @@ struct LoginFormView: View {
                 .autocapitalization(.none)
             TwSecureField("Password", value: $password)
                 .autocapitalization(.none)
-            LogInButton(authentication: authentication, username: username, password: password)
+            LogInButton(username: username, password: password)
         }
     }
 }
 
 struct LoginFormView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginFormView(authentication: Authentication())
+        LoginFormView()
             .previewLayout(.sizeThatFits)
     }
 }
