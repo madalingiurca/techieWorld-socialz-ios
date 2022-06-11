@@ -11,7 +11,6 @@
 		1C5925D3280C18D300C66905 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D2280C18D300C66905 /* AuthManager.swift */; };
 		1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59928C280C3E9600886EE2 /* AuthenticationError.swift */; };
 		1C5E31F9280DD65500962DBA /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E31F8280DD65500962DBA /* PostsListView.swift */; };
-		1C7264D22814BDE4002DA489 /* PostCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7264D12814BDE4002DA489 /* PostCreatorView.swift */; };
 		1C932F17280C7869002DD514 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F16280C7869002DD514 /* PostDataSource.swift */; };
 		1C932F19280C7901002DD514 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F18280C7901002DD514 /* Post.swift */; };
 		1C932F1B280C79D3002DD514 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */; };
@@ -27,6 +26,8 @@
 		1CCFCFDA28107085007B7ED7 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCFCFD928107085007B7ED7 /* PostCard.swift */; };
 		4E1EFEC02850E2800084E8B6 /* NewPostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EFEBF2850E2800084E8B6 /* NewPostButton.swift */; };
 		4E1EFEC3285119630084E8B6 /* LogInButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */; };
+		4EA6439628549B90003E2252 /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6439528549B90003E2252 /* PostDetails.swift */; };
+		4EA643982854C4A9003E2252 /* PostCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA643972854C4A9003E2252 /* PostCreatorView.swift */; };
 		4EEA3B6B284B79CF00F93955 /* LogInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA3B6A284B79CF00F93955 /* LogInButton.swift */; };
 		4EEA3B6D284B7DAC00F93955 /* TwButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA3B6C284B7DAC00F93955 /* TwButton.swift */; };
 		4EEA3B6F284B883300F93955 /* TwTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA3B6E284B883300F93955 /* TwTextField.swift */; };
@@ -56,7 +57,6 @@
 		1C5925D2280C18D300C66905 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		1C59928C280C3E9600886EE2 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		1C5E31F8280DD65500962DBA /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
-		1C7264D12814BDE4002DA489 /* PostCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreatorView.swift; sourceTree = "<group>"; };
 		1C932F16280C7869002DD514 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		1C932F18280C7901002DD514 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
@@ -75,6 +75,8 @@
 		1CCFCFD928107085007B7ED7 /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
 		4E1EFEBF2850E2800084E8B6 /* NewPostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostButton.swift; sourceTree = "<group>"; };
 		4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButtonStyle.swift; sourceTree = "<group>"; };
+		4EA6439528549B90003E2252 /* PostDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
+		4EA643972854C4A9003E2252 /* PostCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreatorView.swift; sourceTree = "<group>"; };
 		4EEA3B6A284B79CF00F93955 /* LogInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButton.swift; sourceTree = "<group>"; };
 		4EEA3B6C284B7DAC00F93955 /* TwButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwButton.swift; sourceTree = "<group>"; };
 		4EEA3B6E284B883300F93955 /* TwTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwTextField.swift; sourceTree = "<group>"; };
@@ -123,8 +125,6 @@
 			children = (
 				1C5925D0280C17EF00C66905 /* MainView.swift */,
 				1C5E31F8280DD65500962DBA /* PostsListView.swift */,
-				1CCFCFD928107085007B7ED7 /* PostCard.swift */,
-				1C7264D12814BDE4002DA489 /* PostCreatorView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -166,6 +166,7 @@
 				1CBEEA84280B71C7009BAEEE /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 1;
 		};
 		1CBEEA84280B71C7009BAEEE /* Products */ = {
 			isa = PBXGroup;
@@ -183,6 +184,7 @@
 				1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */,
 				1C5925CE280C17AD00C66905 /* Login */,
 				1C5925CF280C17CB00C66905 /* MainView */,
+				4EA6439328549B6B003E2252 /* Views */,
 				1C932F15280C7856002DD514 /* DataSource */,
 				4EEA3B69284B79B700F93955 /* Components */,
 				4EF0DF5F284D38C80050518D /* Config */,
@@ -223,6 +225,24 @@
 				4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		4EA6439328549B6B003E2252 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EA6439428549B78003E2252 /* Posts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4EA6439428549B78003E2252 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				4EA643972854C4A9003E2252 /* PostCreatorView.swift */,
+				1CCFCFD928107085007B7ED7 /* PostCard.swift */,
+				4EA6439528549B90003E2252 /* PostDetails.swift */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 		4EEA3B69284B79B700F93955 /* Components */ = {
@@ -379,13 +399,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA643982854C4A9003E2252 /* PostCreatorView.swift in Sources */,
 				4EF0DF61284D38EC0050518D /* Api.swift in Sources */,
 				4EEA3B6F284B883300F93955 /* TwTextField.swift in Sources */,
 				1C932F17280C7869002DD514 /* PostDataSource.swift in Sources */,
 				1C5E31F9280DD65500962DBA /* PostsListView.swift in Sources */,
 				4E1EFEC02850E2800084E8B6 /* NewPostButton.swift in Sources */,
 				1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */,
-				1C7264D22814BDE4002DA489 /* PostCreatorView.swift in Sources */,
 				1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */,
 				1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */,
 				1C932F1B280C79D3002DD514 /* ServiceConfiguration.swift in Sources */,
@@ -397,6 +417,7 @@
 				1C5925D1280C17EF00C66905 /* MainView.swift in Sources */,
 				1CCFCFDA28107085007B7ED7 /* PostCard.swift in Sources */,
 				1C5925D3280C18D300C66905 /* AuthManager.swift in Sources */,
+				4EA6439628549B90003E2252 /* PostDetails.swift in Sources */,
 				4EEA3B71284B8C3D00F93955 /* TwSecureField.swift in Sources */,
 				4E1EFEC3285119630084E8B6 /* LogInButtonStyle.swift in Sources */,
 			);

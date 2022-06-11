@@ -60,7 +60,7 @@ class PostDataSource: ObservableObject {
                     done()
                 },
                 receiveValue: { post in
-                    self.posts.insert(post, at: self.posts.endIndex)
+                    self.posts.insert(post, at: 0)
                 }
             )
             .store(in: &disposables)
