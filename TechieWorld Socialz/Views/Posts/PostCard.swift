@@ -47,10 +47,10 @@ struct PostCard: View {
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PostCard(post: Post(id: 1, author: "Joe Doe", content: "There"),
+            PostCard(post: Post(id: UUID.init(), author: "Joe Doe", content: "There"),
                      numberOfComments: 2)
                 .previewLayout(.fixed(width: 400, height: 200))
-            PostCard(post: Post(id: 2, author: "Nomad", content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."),
+            PostCard(post: Post(id: UUID.init(), author: "Nomad", content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."),
                      numberOfComments: 20)
                 .preferredColorScheme(.dark)
                 .previewLayout(.fixed(width: 400, height: 200))
