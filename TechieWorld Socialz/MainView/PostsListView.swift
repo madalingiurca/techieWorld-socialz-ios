@@ -19,7 +19,7 @@ struct PostsListView: View {
                     List {
                         ForEach(dataSource.posts, id: \.id) { post in
                             HStack {
-                                PostCard(post: post, numberOfComments: 0)
+                                PostCardView(post: post, numberOfComments: 0)
 
                                 NavigationLink(destination: PostDetails(post: post)) {
                                     EmptyView()

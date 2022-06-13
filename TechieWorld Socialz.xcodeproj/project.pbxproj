@@ -23,7 +23,7 @@
 		1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */; };
 		1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */; };
 		1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB2280B8492009BAEEE /* WebService.swift */; };
-		1CCFCFDA28107085007B7ED7 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCFCFD928107085007B7ED7 /* PostCard.swift */; };
+		1CCFCFDA28107085007B7ED7 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCFCFD928107085007B7ED7 /* PostCardView.swift */; };
 		4E1EFEC02850E2800084E8B6 /* NewPostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EFEBF2850E2800084E8B6 /* NewPostButton.swift */; };
 		4E1EFEC3285119630084E8B6 /* LogInButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */; };
 		4EA6439628549B90003E2252 /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6439528549B90003E2252 /* PostDetails.swift */; };
@@ -72,7 +72,7 @@
 		1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		1CBEEAB2280B8492009BAEEE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		1CCFCFD928107085007B7ED7 /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
+		1CCFCFD928107085007B7ED7 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		4E1EFEBF2850E2800084E8B6 /* NewPostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostButton.swift; sourceTree = "<group>"; };
 		4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButtonStyle.swift; sourceTree = "<group>"; };
 		4EA6439528549B90003E2252 /* PostDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA643972854C4A9003E2252 /* PostCreatorView.swift */,
-				1CCFCFD928107085007B7ED7 /* PostCard.swift */,
+				1CCFCFD928107085007B7ED7 /* PostCardView.swift */,
 				4EA6439528549B90003E2252 /* PostDetails.swift */,
 			);
 			path = Posts;
@@ -415,7 +415,7 @@
 				1C932F19280C7901002DD514 /* Post.swift in Sources */,
 				4EEA3B6D284B7DAC00F93955 /* TwButton.swift in Sources */,
 				1C5925D1280C17EF00C66905 /* MainView.swift in Sources */,
-				1CCFCFDA28107085007B7ED7 /* PostCard.swift in Sources */,
+				1CCFCFDA28107085007B7ED7 /* PostCardView.swift in Sources */,
 				1C5925D3280C18D300C66905 /* AuthManager.swift in Sources */,
 				4EA6439628549B90003E2252 /* PostDetails.swift in Sources */,
 				4EEA3B71284B8C3D00F93955 /* TwSecureField.swift in Sources */,
