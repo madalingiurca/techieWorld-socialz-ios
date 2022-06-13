@@ -1,63 +1,53 @@
-//
-//  PostsListView.swift
-//  TechieWorld Socialz
-//
-//  Created by Madalin Giurca on 18.04.2022.
-//
+    //
+    //  PostsListView.swift
+    //  TechieWorld Socialz
+    //
+    //  Created by Madalin Giurca on 18.04.2022.
+    //
 
 import SwiftUI
-import ModalView
 
 struct PostsListView: View {
-    
-    @StateObject var dataSource : PostDataSource
+
+    @State var isViewingPostCreator = false
+    @ObservedObject var dataSource: PostDataSource = PostDataSource()
     
     var body: some View {
         NavigationView {
-            ZStack {
-                ScrollView {
-                    LazyVStack {
+            VStack {
+                ZStack {
+                    List {
                         ForEach(dataSource.posts, id: \.id) { post in
-                            NavigationLink(destination: {
-                                Text("WIP: Post will be here")
-                            }) {
-                                PostView(postContent: post.content, author: post.author, numberOfComments: Int.random(in: 1..<100))
-                                    .task {
-                                        dataSource.loadMoreContentIfNeeded(currentItem: post)
-                                    }
-                                    .padding(.horizontal)
+                            HStack {
+                                PostCardView(post: post, numberOfComments: 0)
+
+                                NavigationLink(destination: PostDetails(post: post)) {
+                                    EmptyView()
+                                }
+                                .frame(width: 0)
+                                .opacity(0)
                             }
-                            .navigationBarHidden(true)
-                            .accentColor(.primary)
+                            .listRowInsets(.init(top: 7,
+                                                 leading: 10,
+                                                 bottom: 7,
+                                                 trailing: 3))
                         }
-                        
-                        if dataSource.isLoadingPage {
-                            ProgressView()
-                        }
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
                     }
+                    .listStyle(.plain)
                     .refreshable(action: {
-                        debugPrint("Posts refreshed.")
+                        dataSource.loadMoreContent()
                     })
+
+                    NewPostButton(dataSource: dataSource)
                 }
-                ModalPresenter {
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            ModalLink(destination: {
-                                dismiss in PostCreatorView(dismiss: dismiss)
-                            }) {
-                                Image(systemName: "plus.bubble.fill")
-                                    .resizable()
-                                    .foregroundColor(Color.primary)
-                                    .frame(width: 40, height: 40, alignment: .trailing)
-                                    .padding()
-                            }
-                        }
-                    }
-                }
-                //                FloatingButton()
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Techiez")
+        }
+        .onAppear() {
+            dataSource.loadMoreContent()
         }
         
     }
@@ -66,13 +56,22 @@ struct PostsListView: View {
 
 struct PostsListView_Previews: PreviewProvider {
     static var previews: some View {
-        let datasource = PostDataSource(accessToken: "access-token")
-        datasource.posts.append(Post(id: 1, author: "Jonutzu", content: "Morbi sit amet vestibulum nisl. Quisque consectetur, nibh ac fermentum rhoncus, nulla mi porttitor nisl, eget faucibus nisi nulla id magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "))
-        datasource.posts.append(Post(id: 2, author: "LeeSin", content: "In eget lectus eget nunc luctus mattis. Nunc ac odio dictum, dignissim metus vitae, tempus nunc. Phasellus nec lobortis dui. Nulla iaculis, velit a faucibus ultricies, lorem eros finibus elit, at condimentum nulla metus tempus magna. In id tempus diam. Cras volutpat sapien et arcu dictum ullamcorper."))
-        datasource.posts.append(Post(id: 3, author: "hotter", content: "Nulla dolor enim, fringilla vel elit eget, pulvinar convallis sapien. Nullam non auctor mi, ut maximus urna. Vestibulum faucibus sit amet erat vitae pellentesque. Curabitur et accumsan velit. Cras enim sem, auctor sed diam vitae, porttitor commodo nulla. Nullam id elit ut felis sagittis congue. Vestibulum sodales dolor eu augue tincidunt, eget consectetur mi vulputate. Morbi et quam nunc. Donec sagittis in velit sit amet suscipit. Morbi a dolor at est placerat suscipit in non felis. Praesent egestas enim quis mi vestibulum, eu pellentesque enim faucibus. Nulla maximus purus vitae ante condimentum, eu lobortis velit suscipit. Phasellus id purus quam. Vivamus nulla purus, laoreet in ex non, tincidunt suscipit diam. Curabitur tincidunt eros elit, vel dapibus nulla laoreet sit amet."))
-        datasource.isLoadingPage = false
-        
-        return PostsListView(dataSource: datasource)
+
+        let datasource = PostDataSource()
+        datasource.posts = [
+            Post(id: UUID.init(), author: "Mirel", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros libero, faucibus a lobortis ac, egestas non lectus. Curabitur est nunc, interdum sed urna nec, facilisis posuere arcu. Phasellus vulputate odio turpis, ac accumsan nibh fermentum ut. Vivamus lobortis nulla urna, quis dapibus odio ullamcorper non."),
+            Post(id: UUID.init(), author: "Tony", content: "Aenean dignissim laoreet mi."),
+            Post(id: UUID.init(), author: "Tataie", content: "Quisque convallis maximus augue quis porttitor. Praesent vel sodales ex. Mauris consequat orci porttitor purus scelerisque molestie. Vivamus auctor ut ex ac molestie."),
+            Post(id: UUID.init(), author: "Tataie", content: "Suspendisse at nisl felis. Sed fringilla purus vel nunc dapibus, in tincidunt neque fermentum. Donec viverra luctus pretium. Ut tincidunt, nunc in semper aliquet, elit turpis pulvinar mi, quis facilisis risus nunc non felis."),
+            Post(id: UUID.init(), author: "Mirel", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros libero, faucibus a lobortis ac, egestas non lectus. Curabitur est nunc, interdum sed urna nec, facilisis posuere arcu. Phasellus vulputate odio turpis, ac accumsan nibh fermentum ut. Vivamus lobortis nulla urna, quis dapibus odio ullamcorper non."),
+            Post(id: UUID.init(), author: "Tony", content: "Aenean dignissim laoreet mi, a vulputate diam pellentesque tempus. Aenean eget tincidunt est. Nulla quis iaculis nibh, nec vulputate elit. Suspendisse placerat nunc tincidunt diam bibendum posuere. Quisque eget aliquam lorem. Aenean sodales dolor in dictum tempus. Donec sit amet mi mi."),
+            Post(id: UUID.init(), author: "Tataie", content: "Quisque convallis maximus augue quis porttitor. Praesent vel sodales ex. Mauris consequat orci porttitor purus scelerisque molestie. Vivamus auctor ut ex ac molestie."),
+            Post(id: UUID.init(), author: "Tataie", content: "Suspendisse at nisl felis. Sed fringilla purus vel nunc dapibus, in tincidunt neque fermentum. Donec viverra luctus pretium. Ut tincidunt, nunc in semper aliquet, elit turpis pulvinar mi, quis facilisis risus nunc non felis."),
+        ]
+
+        return Group {
+            PostsListView(dataSource: datasource)
+        }
     }
 }
 

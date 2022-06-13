@@ -9,21 +9,16 @@ import SwiftUI
 
 @main
 struct TechieWorld_SocialzApp: App {
-    @StateObject var authentication: Authentication
-    
-    init() {
-        self._authentication = StateObject(wrappedValue: Authentication())
-    }
-    
+    @StateObject var authManager: AuthManager = AuthManager()
+
     var body: some Scene {
         WindowGroup {
-            if authentication.isAuthenticated {
-                MainView(postDataSource: PostDataSource(accessToken: authentication.accessToken))
-                    .environmentObject(authentication)
+            if authManager.isAuthenticated {
+                MainView()
             }
             else {
                 LoginView()
-                    .environmentObject(authentication)
+                    .environmentObject(authManager)
             }
         }
     }

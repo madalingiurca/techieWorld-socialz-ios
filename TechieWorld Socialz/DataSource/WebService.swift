@@ -9,13 +9,11 @@ import Foundation
 
 @MainActor
 class WebService {
-//    private let urlString = "http://localhost:8080/login"
-    private let urlString = "http://20.229.185.66:8080/login"
+    private let baseURL = API.URL + "/login"
     static let shared = WebService()
     
-    
     func singIn(username: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) async {
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: baseURL) else { return }
         let json: [String: Any] = ["username": username,
                                    "password": password]
         let jsonData = try? JSONSerialization.data(withJSONObject: json)

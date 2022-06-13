@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var authentication: Authentication
     var body: some View {
         VStack(spacing: 30.0) {
             VStack(alignment: .center, spacing: 0.0) {
@@ -23,7 +22,7 @@ struct LoginView: View {
             .ignoresSafeArea(.keyboard)
             
             Spacer()
-            LoginFormView(authentication: authentication)
+            LoginFormView()
             Spacer()
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                 Text("Sign up, if you’re new!")
@@ -52,7 +51,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             LoginView()
-                .environmentObject(Authentication())
+                .environmentObject(AuthManager())
                 .previewInterfaceOrientation(.portrait)
         }
     }
