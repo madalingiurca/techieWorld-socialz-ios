@@ -10,9 +10,11 @@ IOS Swift application which provides access to Socialz - a TechieWorld project.
 Functionalities:
 
 1. Login
+
  <img src=Images/login_white.png height=400> <img src=Images/login_dark.png height=400>
 
 2. Posts overview with logout and new post options
+
  <img src=Images/main-view_white.png height=400> <img src=Images/main-view_dark.png height=400>
 
 
