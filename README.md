@@ -10,31 +10,11 @@ IOS Swift application which provides access to Socialz - a TechieWorld project.
 Functionalities:
 
 1. Login
-![Simulator Screen Shot - iPhone 14 - 2022-10-09 at 17 42 41](https://user-images.githubusercontent.com/39347242/194763257-3af445ea-8104-4ad2-a81c-a19c166bf9b9.png)
+ <img src=Images/login_white.png height=400> <img src=Images/login_dark.png height=400>
 
 2. Posts overview with logout and new post options
+ <img src=Images/main-view_white.png height=400> <img src=Images/main-view_dark.png height=400>
 
-
-
-[comment]: <> (* How to run the program)
-
-[comment]: <> (* Step-by-step bullets)
-
-[comment]: <> (```)
-
-[comment]: <> (code blocks for commands)
-
-[comment]: <> (```)
-
-## Help
-
-[comment]: <> (Any advise for common problems or issues.)
-
-[comment]: <> (```)
-
-[comment]: <> (command to run if program contains helper info)
-
-[comment]: <> (```)
 
 ## Authors
 
