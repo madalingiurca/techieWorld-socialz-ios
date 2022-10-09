@@ -32,7 +32,7 @@ class PostDataSource: ObservableObject {
             loadMoreContent()
         }
     }
-
+    
     func createNewPost(_ content: String, done: @escaping () -> Void) {
         guard let url = URL(string: API.URL + "/posts/new") else { return }
         var request = URLRequest(url: url)
@@ -43,7 +43,7 @@ class PostDataSource: ObservableObject {
             "content": content
         ]
         request.httpBody = try? JSONSerialization.data(withJSONObject: newPostRequest)
-
+        
         URLSession.shared.dataTaskPublisher(for: request)
             .tryMap() { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse,
@@ -56,7 +56,7 @@ class PostDataSource: ObservableObject {
             .receive(on: RunLoop.main)
             .sink(
                 receiveCompletion: { _ in
-                    print("Added new post.")
+                    debugPrint("Added new post.")
                     done()
                 },
                 receiveValue: { post in
@@ -74,6 +74,10 @@ class PostDataSource: ObservableObject {
         request.addValue("Bearer " + accessToken, forHTTPHeaderField: "AUTHORIZATION")
         
         URLSession.shared.dataTaskPublisher(for: request).tryMap() { element -> Data in
+            guard let httpResponse = element.response as? HTTPURLResponse,
+                  httpResponse.statusCode != 401 else {
+                throw URLError(.userAuthenticationRequired, userInfo: ["Access token": self.accessToken])
+            }
             return element.data
         }
         .decode(type: [Post].self, decoder: JSONDecoder())
@@ -87,9 +91,4 @@ class PostDataSource: ObservableObject {
         })
         .store(in: &disposables)
     }
-
-    func setAccessToken(_ token: String) {
-        self.accessToken = token
-    }
-
 }

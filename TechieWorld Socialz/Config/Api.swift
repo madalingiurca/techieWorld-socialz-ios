@@ -8,6 +8,6 @@
 import Foundation
 
 struct API {
-    static let URL = "http://localhost:8087"
-//    static let URL = "https://techie-world-socialz.herokuapp.com"
+//    static let URL = "http://localhost:8080"
+    static let URL = "https://techie-world-socialz.herokuapp.com"
 }

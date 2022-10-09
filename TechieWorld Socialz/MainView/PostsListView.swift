@@ -1,14 +1,14 @@
-    //
-    //  PostsListView.swift
-    //  TechieWorld Socialz
-    //
-    //  Created by Madalin Giurca on 18.04.2022.
-    //
+//
+//  PostsListView.swift
+//  TechieWorld Socialz
+//
+//  Created by Madalin Giurca on 18.04.2022.
+//
 
 import SwiftUI
 
 struct PostsListView: View {
-
+    
     @State var isViewingPostCreator = false
     @ObservedObject var dataSource: PostDataSource = PostDataSource()
     
@@ -20,7 +20,7 @@ struct PostsListView: View {
                         ForEach(dataSource.posts, id: \.id) { post in
                             HStack {
                                 PostCardView(post: post, numberOfComments: 0)
-
+                                
                                 NavigationLink(destination: PostDetails(post: post)) {
                                     EmptyView()
                                 }
@@ -39,24 +39,26 @@ struct PostsListView: View {
                     .refreshable(action: {
                         dataSource.loadMoreContent()
                     })
-
+                    
                     NewPostButton(dataSource: dataSource)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Techiez")
+            .toolbar {
+                LogOutButton()
+            }
         }
         .onAppear() {
             dataSource.loadMoreContent()
         }
-        
     }
 }
 
 
 struct PostsListView_Previews: PreviewProvider {
     static var previews: some View {
-
+        
         let datasource = PostDataSource()
         datasource.posts = [
             Post(id: UUID.init(), author: "Mirel", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros libero, faucibus a lobortis ac, egestas non lectus. Curabitur est nunc, interdum sed urna nec, facilisis posuere arcu. Phasellus vulputate odio turpis, ac accumsan nibh fermentum ut. Vivamus lobortis nulla urna, quis dapibus odio ullamcorper non."),
@@ -68,7 +70,7 @@ struct PostsListView_Previews: PreviewProvider {
             Post(id: UUID.init(), author: "Tataie", content: "Quisque convallis maximus augue quis porttitor. Praesent vel sodales ex. Mauris consequat orci porttitor purus scelerisque molestie. Vivamus auctor ut ex ac molestie."),
             Post(id: UUID.init(), author: "Tataie", content: "Suspendisse at nisl felis. Sed fringilla purus vel nunc dapibus, in tincidunt neque fermentum. Donec viverra luctus pretium. Ut tincidunt, nunc in semper aliquet, elit turpis pulvinar mi, quis facilisis risus nunc non felis."),
         ]
-
+        
         return Group {
             PostsListView(dataSource: datasource)
         }

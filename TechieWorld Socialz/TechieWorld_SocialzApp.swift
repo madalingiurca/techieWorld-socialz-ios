@@ -10,11 +10,12 @@ import SwiftUI
 @main
 struct TechieWorld_SocialzApp: App {
     @StateObject var authManager: AuthManager = AuthManager()
-
+    
     var body: some Scene {
         WindowGroup {
             if authManager.isAuthenticated {
                 MainView()
+                    .environmentObject(authManager)
             }
             else {
                 LoginView()

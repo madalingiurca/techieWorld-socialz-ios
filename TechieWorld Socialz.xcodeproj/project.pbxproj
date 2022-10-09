@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C19A32028EB81C6008A51AC /* JwtUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C19A31F28EB81C6008A51AC /* JwtUtil.swift */; };
 		1C5925D1280C17EF00C66905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D0280C17EF00C66905 /* MainView.swift */; };
 		1C5925D3280C18D300C66905 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5925D2280C18D300C66905 /* AuthManager.swift */; };
 		1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59928C280C3E9600886EE2 /* AuthenticationError.swift */; };
 		1C5E31F9280DD65500962DBA /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E31F8280DD65500962DBA /* PostsListView.swift */; };
+		1C6C263228EF96020096B397 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 1C6C263128EF96020096B397 /* SwiftJWT */; };
+		1C6C263428F307240096B397 /* LogOutButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C263328F307240096B397 /* LogOutButtonStyle.swift */; };
+		1C6C263628F307690096B397 /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C263528F307690096B397 /* LogOutButton.swift */; };
 		1C932F17280C7869002DD514 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F16280C7869002DD514 /* PostDataSource.swift */; };
 		1C932F19280C7901002DD514 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F18280C7901002DD514 /* Post.swift */; };
-		1C932F1B280C79D3002DD514 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */; };
 		1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */; };
 		1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA88280B71C7009BAEEE /* LoginView.swift */; };
 		1CBEEA8B280B71C9009BAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */; };
@@ -53,13 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C19A31F28EB81C6008A51AC /* JwtUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtUtil.swift; sourceTree = "<group>"; };
 		1C5925D0280C17EF00C66905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1C5925D2280C18D300C66905 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		1C59928C280C3E9600886EE2 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		1C5E31F8280DD65500962DBA /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
+		1C6C263328F307240096B397 /* LogOutButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonStyle.swift; sourceTree = "<group>"; };
+		1C6C263528F307690096B397 /* LogOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
 		1C932F16280C7869002DD514 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		1C932F18280C7901002DD514 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
 		1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechieWorld Socialz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBEEA86280B71C7009BAEEE /* TechieWorld_SocialzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzApp.swift; sourceTree = "<group>"; };
 		1CBEEA88280B71C7009BAEEE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C6C263228EF96020096B397 /* SwiftJWT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,10 +118,11 @@
 		1C5925CE280C17AD00C66905 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1C59928B280C3E8700886EE2 /* Model */,
+				1C59928B280C3E8700886EE2 /* AuthenticationUtils */,
 				1CBEEA88280B71C7009BAEEE /* LoginView.swift */,
 				1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */,
 				4EEA3B6A284B79CF00F93955 /* LogInButton.swift */,
+				1C6C263528F307690096B397 /* LogOutButton.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -129,13 +136,14 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		1C59928B280C3E8700886EE2 /* Model */ = {
+		1C59928B280C3E8700886EE2 /* AuthenticationUtils */ = {
 			isa = PBXGroup;
 			children = (
 				1C5925D2280C18D300C66905 /* AuthManager.swift */,
 				1C59928C280C3E9600886EE2 /* AuthenticationError.swift */,
+				1C19A31F28EB81C6008A51AC /* JwtUtil.swift */,
 			);
-			path = Model;
+			path = AuthenticationUtils;
 			sourceTree = "<group>";
 		};
 		1C932F15280C7856002DD514 /* DataSource */ = {
@@ -144,7 +152,6 @@
 				1C932F1E280C7B0C002DD514 /* Model */,
 				1CBEEAB2280B8492009BAEEE /* WebService.swift */,
 				1C932F16280C7869002DD514 /* PostDataSource.swift */,
-				1C932F1A280C79D3002DD514 /* ServiceConfiguration.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -223,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1EFEC2285119630084E8B6 /* LogInButtonStyle.swift */,
+				1C6C263328F307240096B397 /* LogOutButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 			);
 			name = "TechieWorld Socialz";
 			packageProductDependencies = (
+				1C6C263128EF96020096B397 /* SwiftJWT */,
 			);
 			productName = "TechieWorld Socialz";
 			productReference = 1CBEEA83280B71C7009BAEEE /* TechieWorld Socialz.app */;
@@ -356,6 +365,7 @@
 			);
 			mainGroup = 1CBEEA7A280B71C7009BAEEE;
 			packageReferences = (
+				1C6C263028EF96020096B397 /* XCRemoteSwiftPackageReference "Swift-JWT" */,
 			);
 			productRefGroup = 1CBEEA84280B71C7009BAEEE /* Products */;
 			projectDirPath = "";
@@ -402,19 +412,21 @@
 				4EA643982854C4A9003E2252 /* PostCreatorView.swift in Sources */,
 				4EF0DF61284D38EC0050518D /* Api.swift in Sources */,
 				4EEA3B6F284B883300F93955 /* TwTextField.swift in Sources */,
+				1C6C263428F307240096B397 /* LogOutButtonStyle.swift in Sources */,
 				1C932F17280C7869002DD514 /* PostDataSource.swift in Sources */,
 				1C5E31F9280DD65500962DBA /* PostsListView.swift in Sources */,
+				1C19A32028EB81C6008A51AC /* JwtUtil.swift in Sources */,
 				4E1EFEC02850E2800084E8B6 /* NewPostButton.swift in Sources */,
 				1C59928D280C3E9600886EE2 /* AuthenticationError.swift in Sources */,
 				1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */,
 				1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */,
-				1C932F1B280C79D3002DD514 /* ServiceConfiguration.swift in Sources */,
 				1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */,
 				1CBEEA87280B71C7009BAEEE /* TechieWorld_SocialzApp.swift in Sources */,
 				4EEA3B6B284B79CF00F93955 /* LogInButton.swift in Sources */,
 				1C932F19280C7901002DD514 /* Post.swift in Sources */,
 				4EEA3B6D284B7DAC00F93955 /* TwButton.swift in Sources */,
 				1C5925D1280C17EF00C66905 /* MainView.swift in Sources */,
+				1C6C263628F307690096B397 /* LogOutButton.swift in Sources */,
 				1CCFCFDA28107085007B7ED7 /* PostCardView.swift in Sources */,
 				1C5925D3280C18D300C66905 /* AuthManager.swift in Sources */,
 				4EA6439628549B90003E2252 /* PostDetails.swift in Sources */,
@@ -744,6 +756,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C6C263028EF96020096B397 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/Swift-JWT.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C6C263128EF96020096B397 /* SwiftJWT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C6C263028EF96020096B397 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			productName = SwiftJWT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CBEEA7B280B71C7009BAEEE /* Project object */;
 }
