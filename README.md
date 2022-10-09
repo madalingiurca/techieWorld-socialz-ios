@@ -24,6 +24,8 @@ Contributors names and contact info
 
 [@MadalinGiurca](https://www.linkedin.com/in/madalin-stefan-giurca-08a964186)
 
+[@BogdanNegoita](https://www.linkedin.com/in/bogdan-negoita-06031814a)
+
 ## Version History
 
 * 0.1
