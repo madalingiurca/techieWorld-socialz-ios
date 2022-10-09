@@ -21,9 +21,6 @@
 		1CBEEA89280B71C7009BAEEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA88280B71C7009BAEEE /* LoginView.swift */; };
 		1CBEEA8B280B71C9009BAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */; };
 		1CBEEA8E280B71C9009BAEEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBEEA8D280B71C9009BAEEE /* Preview Assets.xcassets */; };
-		1CBEEA98280B71C9009BAEEE /* TechieWorld_SocialzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEA97280B71C9009BAEEE /* TechieWorld_SocialzTests.swift */; };
-		1CBEEAA2280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */; };
-		1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */; };
 		1CBEEAB1280B8109009BAEEE /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */; };
 		1CBEEAB3280B8492009BAEEE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEEAB2280B8492009BAEEE /* WebService.swift */; };
 		1CCFCFDA28107085007B7ED7 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCFCFD928107085007B7ED7 /* PostCardView.swift */; };
@@ -71,10 +68,7 @@
 		1CBEEA8A280B71C9009BAEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CBEEA8D280B71C9009BAEEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1CBEEA93280B71C9009BAEEE /* TechieWorld SocialzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechieWorld SocialzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CBEEA97280B71C9009BAEEE /* TechieWorld_SocialzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzTests.swift; sourceTree = "<group>"; };
 		1CBEEA9D280B71C9009BAEEE /* TechieWorld SocialzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechieWorld SocialzUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITests.swift; sourceTree = "<group>"; };
-		1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechieWorld_SocialzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1CBEEAB0280B8109009BAEEE /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		1CBEEAB2280B8492009BAEEE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		1CCFCFD928107085007B7ED7 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
@@ -168,8 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				1CBEEA85280B71C7009BAEEE /* TechieWorld Socialz */,
-				1CBEEA96280B71C9009BAEEE /* TechieWorld SocialzTests */,
-				1CBEEAA0280B71C9009BAEEE /* TechieWorld SocialzUITests */,
 				1CBEEA84280B71C7009BAEEE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,23 +199,6 @@
 				1CBEEA8D280B71C9009BAEEE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1CBEEA96280B71C9009BAEEE /* TechieWorld SocialzTests */ = {
-			isa = PBXGroup;
-			children = (
-				1CBEEA97280B71C9009BAEEE /* TechieWorld_SocialzTests.swift */,
-			);
-			path = "TechieWorld SocialzTests";
-			sourceTree = "<group>";
-		};
-		1CBEEAA0280B71C9009BAEEE /* TechieWorld SocialzUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1CBEEAA1280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift */,
-				1CBEEAA3280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift */,
-			);
-			path = "TechieWorld SocialzUITests";
 			sourceTree = "<group>";
 		};
 		4E1EFEC12851194C0084E8B6 /* Styles */ = {
@@ -439,7 +414,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBEEA98280B71C9009BAEEE /* TechieWorld_SocialzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBEEAA2280B71C9009BAEEE /* TechieWorld_SocialzUITests.swift in Sources */,
-				1CBEEAA4280B71C9009BAEEE /* TechieWorld_SocialzUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
